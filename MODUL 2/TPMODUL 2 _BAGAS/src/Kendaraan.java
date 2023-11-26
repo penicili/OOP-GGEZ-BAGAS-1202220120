@@ -10,7 +10,7 @@ public class Kendaraan {
         this.kapasitasPenumpang = kapasitasPenumpang;
     }
     public String toString(){
-        return "ID: " + nomorIdentifikasi + "\nTop Speed: " + kecepatanMaksimum + "\nKapasitas:" + kapasitasPenumpang;
+        return "ID: " + nomorIdentifikasi + "\nTop Speed: " + kecepatanMaksimum + "Km/h" + "\nKapasitas:" + kapasitasPenumpang;
     }
     public double hitungWaktuTempuh(double jarak){
         return jarak/kecepatanMaksimum;
