@@ -2,9 +2,10 @@ public class MainApp {
     public static void main(String[] args){
         Mobil mobil = new Mobil("1770", 280, 4, 3);
         System.out.println("Informasi mobil\n"+ mobil.toString());
-        System.out.println("\n Waktu tempuh dengan Mobil: "+ mobil.hitungWaktuTempuh(560)+" jam");
+        System.out.println("\n Waktu tempuh dengan Mobil: "+ mobil.hitungWaktuTempuh(560)+" jam\n");
     
         Bus bus = new Bus("1771", 356, 36, 38);
         System.out.println("Informasi bus\n"+ bus.toString());
+        System.out.println("\n Waktu tempuh dengan Bus: "+ bus.hitungWaktuTempuh(560)+" jam\n");
     }
 }
