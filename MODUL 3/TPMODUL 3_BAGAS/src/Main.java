@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
@@ -9,16 +10,26 @@ public class Main {
         
         //membuat objek student, teacher dan atmin
             //Objek student
+            Student student = null;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter student name:");
-        String studentName = scanner.nextLine();
-        System.out.println("Enter student ID:");
-        int studentId = scanner.nextInt();
-        Student student = new Student(studentName, studentId);
+        while(true){
+            try {
+                System.out.println("Enter student name:");
+                String studentName = scanner.nextLine();
+                System.out.println("Enter student ID:");
+                int studentId = scanner.nextInt();
+                student = new Student(studentName, studentId);
+                break;            
+            } catch (InputMismatchException e) {
+                System.out.println("Anda gagal");
+            }
+        }
         scanner.nextLine();
         System.out.println("Enter course to enroll in (separated by commas)");
         String enrollcourse = scanner.nextLine();
+        if(student != null){
         student.enrollInCourse(enrollcourse);
+    }
         System.out.println("\n");
         scanner.close();
 
